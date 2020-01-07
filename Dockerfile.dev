@@ -1,0 +1,10 @@
+#This is a sample Image 
+# Build From Base Image
+FROM node:alpine 
+WORKDIR /app
+# Update Base Image
+COPY ./package.json ./
+RUN npm install 
+COPY . .
+# Update Startup Command
+CMD ["npm","start"]
